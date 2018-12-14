@@ -40,11 +40,11 @@ export default class Enumitron {
   }
 
   public get asIds(): number[] {
-    return this._enumArray.map(x => x.id);
+    return this._enumArray.map(item => item.id);
   }
 
   public get asNames(): string[] {
-    return this._enumArray.map(x => x.name);
+    return this._enumArray.map(item => item.name);
   }
 
   public get asObjects(): IEnum[] {
