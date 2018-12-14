@@ -17,6 +17,8 @@ const numbersEnum = new Enumitron(numbers);
 
 All enums are required to have unique names and ids. If there are objects with duplicate names or ids in the array that is passed into the Enumitron constructor, an error will be thrown.
 
+Any additional key/value pairs contained in the objects you pass in will be preserved. The values can be of any type.
+
 ## Getters
 
 ### asDictionary
