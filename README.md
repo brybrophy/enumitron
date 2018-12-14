@@ -2,7 +2,7 @@
 
 ### Generate enumerations in many different forms.
 
-This package can be used to create type-safe enumerations, and retrieve them as a dictionary, as an array of id's, as an array or names, or an array of objects. You can also lookup a name by id.
+This package can be used to create type-safe enumerations, and retrieve them as a dictionary, as an array of id's, as an array of names, or as an array of objects. You can also lookup a name by id.
 
 ## Usage
 
@@ -15,7 +15,7 @@ const numbersEnum = new Enumitron(numbers);
 
 ## Constraints
 
-All enums are required to have unique names and ids. If there are objects with duplicate names or ids in the array that is passed into the Enumitron constructor, a error will be thrown.
+All enums are required to have unique names and ids. If there are objects with duplicate names or ids in the array that is passed into the Enumitron constructor, an error will be thrown.
 
 ## Getters
 
