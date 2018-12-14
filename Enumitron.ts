@@ -54,7 +54,7 @@ export default class Enumitron {
   public getNameById(id: number): string {
     const result = this._enumArray.find(item => item.id === id);
     if (!result) {
-      return this._throwError(`Enumitron with id ${id} does not exist`);
+      return this._throwError(`Enum with id ${id} does not exist`);
     }
     return result.name;
   }

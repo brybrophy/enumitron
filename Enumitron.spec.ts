@@ -72,7 +72,7 @@ describe('Enumitron', () => {
 
     it('throws error when match is not found', () => {
       const actual = () => new Enumitron(enumArray).getNameById(3);
-      const expected = 'Enumitron with id 3 does not exist';
+      const expected = 'Enum with id 3 does not exist';
       assert.throws(actual, expected);
     });
   });
