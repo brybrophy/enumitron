@@ -4,6 +4,9 @@ import Enumitron from './Enumitron';
 const enumArray = [{ id: 1, name: 'One' }, { id: 2, name: 'Two' }];
 const duplicateIdArray = [{ id: 1, name: 'One' }, { id: 1, name: 'Two' }];
 const duplicateNameArray = [{ id: 1, name: 'One' }, { id: 2, name: 'One' }];
+const extraKeyValuesArray = [
+  { id: 1, name: 'One', translations: { spanish: 'Uno', german: 'Ein' } }
+];
 
 describe('Enumitron', () => {
   describe('constructor', () => {
@@ -37,6 +40,18 @@ describe('Enumitron', () => {
       };
       assert.deepEqual(actual, expected);
     });
+
+    it('returns dictionary with extra key/value pair preserved', () => {
+      const actual = new Enumitron(extraKeyValuesArray).asDictionary;
+      const expected = {
+        One: {
+          id: 1,
+          name: 'One',
+          translations: { spanish: 'Uno', german: 'Ein' }
+        }
+      };
+      assert.deepEqual(actual, expected);
+    });
   });
 
   describe('asIds', () => {
@@ -59,6 +74,12 @@ describe('Enumitron', () => {
     it('returns the enum in its original form', () => {
       const actual = new Enumitron(enumArray).asObjects;
       const expected = enumArray;
+      assert.deepEqual(actual, expected);
+    });
+
+    it('returns objects with extra key/value pair preserved', () => {
+      const actual = new Enumitron(extraKeyValuesArray).asObjects;
+      const expected = extraKeyValuesArray;
       assert.deepEqual(actual, expected);
     });
   });
