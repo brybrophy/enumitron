@@ -1,0 +1,33 @@
+{
+  "name": "enumitron",
+  "version": "0.0.1",
+  "description": "An enumeration class written in TypeScript",
+  "main": "Enumitron.ts",
+  "scripts": {
+    "build": "tsc",
+    "pretest": "yarn build",
+    "test": "mocha ./dist/Enumitron.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brybrophy/enumitron.git"
+  },
+  "keywords": [
+    "Enumitron",
+    "Enumeration",
+    "TypeScript"
+  ],
+  "author": "Bryan Brophy <brybrophy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brybrophy/enumitron/issues"
+  },
+  "homepage": "https://github.com/brybrophy/enumitron#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "typescript": "^3.2.2"
+  }
+}
