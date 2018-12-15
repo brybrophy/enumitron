@@ -9,6 +9,27 @@ const extraKeyValuesArray = [
 ];
 
 describe('Enumitron', () => {
+  it('is iterable with for loop', () => {
+    const actual = new Enumitron(enumArray);
+    for (let i = 0; i < actual.length; i++) {
+      assert.deepEqual(actual[i], enumArray[i]);
+    }
+  });
+
+  it('is iterable with for of loop', () => {
+    const actual = new Enumitron(enumArray);
+    let index = 0;
+    for (let expected of actual) {
+      assert.deepEqual(actual[index++], expected);
+    }
+  });
+
+  it('can access items at index', () => {
+    const actual = new Enumitron(enumArray)[1];
+    const expected = enumArray[1];
+    assert.deepEqual(actual, expected);
+  });
+
   describe('constructor', () => {
     it('does not throw errors', () => {
       assert.doesNotThrow(() => new Enumitron(enumArray));

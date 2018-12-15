@@ -10,12 +10,24 @@ interface IEnumDictionary {
 
 export default class Enumitron {
   private _enumArray: IEnum[] = [];
+  private _currentIndex = 0;
+  public length: number = 0;
+  [index: number]: IEnum;
 
   constructor(enumArray: IEnum[]) {
     this._enumArray = this._validateUnique(
       'id',
       this._validateUnique('name', enumArray)
     );
+    this.length = this._enumArray.length;
+    this._assignIndexes(this._enumArray);
+  }
+
+  private _assignIndexes(enumArray: IEnum[]) {
+    let index = 0;
+    for (let item of enumArray) {
+      this[index++] = item;
+    }
   }
 
   private _throwError(msg: string): never {
@@ -57,5 +69,23 @@ export default class Enumitron {
       return this._throwError(`Enum with id ${id} does not exist`);
     }
     return result.name;
+  }
+
+  public next(): IteratorResult<IEnum | null> {
+    if (this._currentIndex < this._enumArray.length) {
+      return {
+        done: false,
+        value: this._enumArray[this._currentIndex++]
+      };
+    } else {
+      return {
+        done: true,
+        value: null
+      };
+    }
+  }
+
+  public [Symbol.iterator](): IterableIterator<IEnum | null> {
+    return this;
   }
 }

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "lib": ["esnext"],
+    "downlevelIteration": true,
+    "lib": ["dom", "esnext", "es2015.iterable"],
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": true,

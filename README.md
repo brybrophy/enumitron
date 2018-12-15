@@ -63,3 +63,30 @@ numbersEnum.getNameById(1);
 ```
 
 If a name is not found at the given id, an error will be thrown.
+
+## Iteration
+
+To make retrieval of enumerations more streamlined, the Enumitron class is implemented as a interable class. This allows you to access properties of the class at their indexes, and perform loops on the class.
+
+### For Loop
+
+```javascript
+for (let i = 0; i < numbersEnum.length; i++) {
+  doThingWithEnum(numbersEnum[i]);
+}
+```
+
+### For Of Loop
+
+```javascript
+for (let item of numbersEnum) {
+  doThingWithEnum(item);
+}
+```
+
+### Index Access
+
+```javascript
+numbersEnum[1];
+// returns { id: 2, name: 'Two' }
+```
