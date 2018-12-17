@@ -11,7 +11,6 @@ interface IEnumDictionary {
 export default class Enumitron {
   private _enumArray: IEnum[] = [];
   private _currentIndex = 0;
-  public length: number = 0;
   [index: number]: IEnum;
 
   constructor(enumArray: IEnum[]) {
@@ -19,7 +18,6 @@ export default class Enumitron {
       'id',
       this._validateUnique('name', enumArray)
     );
-    this.length = this._enumArray.length;
     this._assignIndexes(this._enumArray);
   }
 
@@ -69,6 +67,10 @@ export default class Enumitron {
       return this._throwError(`Enum with id ${id} does not exist`);
     }
     return result.name;
+  }
+
+  public get length() {
+    return this._enumArray.length;
   }
 
   public next(): IteratorResult<IEnum | null> {
