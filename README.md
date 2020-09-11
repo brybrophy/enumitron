@@ -30,11 +30,12 @@ Any additional key/value pairs contained in the objects you pass in will be pres
 
 ```javascript
 numbersEnum.asDictionary;
-// returns...
-// {
-//   One: { id: 1, name: 'One' },
-//   Two: { id: 2, name: 'Two' }
-// }
+/* returns...
+{
+  One: { id: 1, name: 'One' },
+  Two: { id: 2, name: 'Two' }
+}
+*/
 ```
 
 ### asIds
@@ -68,6 +69,29 @@ numbersEnum.getNameById(1);
 ```
 
 If a name is not found at the given id, an error will be thrown.
+
+## Additional Properties
+
+You can include more that just `id` and `name` into an enumeration object. Whatever properties you include will be preserved and returned when `enum.asObject` or `enum.asDictionary` is called.
+
+```javascript
+import Enumitron from "enumitron";
+
+const numbers = [
+  { id: 1, name: "One", translations: { german: "Ein", spanish: "Uno" } },
+  { id: 2, name: "Two", translations: { german: "Zwei", spanish: "Dos" } },
+];
+const numbersEnum = new Enumitron(numbers);
+
+numbersEnum.asObjects;
+/* 
+returns 
+[
+  { id: 1, name: "One", translations: { german: "Ein", spanish: "Uno" } },
+  { id: 2, name: "Two", translations: { german: "Zwei", spanish: "Dos" } },
+]
+*/
+```
 
 ## Iteration
 
