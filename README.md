@@ -1,5 +1,7 @@
 # Enumitron
 
+![https://img.shields.io/github/license/brybrophy/enumitron?color=blue](https://img.shields.io/github/license/brybrophy/enumitron?color=blue) ![https://img.shields.io/npm/v/enumitron](https://img.shields.io/npm/v/enumitron) ![https://img.shields.io/bundlephobia/minzip/enumitron](https://img.shields.io/bundlephobia/minzip/enumitron) ![https://img.shields.io/librariesio/release/npm/enumitron](https://img.shields.io/librariesio/release/npm/enumitron)
+
 ### Generate enumerations in many different forms.
 
 This package can be used to create type-safe enumerations, and retrieve them as a dictionary, as an array of id's, as an array of names, or as an array of objects. You can also lookup a name by id.
@@ -7,9 +9,12 @@ This package can be used to create type-safe enumerations, and retrieve them as 
 ## Usage
 
 ```javascript
-import Enumitron from 'enumitron';
+import Enumitron from "enumitron";
 
-const numbers = [{ id: 1, name: 'One' }, { id: 2, name: 'Two' }];
+const numbers = [
+  { id: 1, name: "One" },
+  { id: 2, name: "Two" },
+];
 const numbersEnum = new Enumitron(numbers);
 ```
 
