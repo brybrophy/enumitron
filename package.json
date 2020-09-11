@@ -1,6 +1,6 @@
 {
   "name": "enumitron",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An enumeration class written in TypeScript",
   "main": "dist/Enumitron.js",
   "scripts": {

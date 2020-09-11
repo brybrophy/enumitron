@@ -72,7 +72,7 @@ If a name is not found at the given id, an error will be thrown.
 
 ## Additional Properties
 
-You can include more that just `id` and `name` into an enumeration object. Whatever properties you include will be preserved and returned when `enum.asObject` or `enum.asDictionary` is called.
+You can include more than just `id` and `name` into an enumeration object. Whatever properties you include will be preserved and returned when `enum.asObject` or `enum.asDictionary` is called.
 
 ```javascript
 import Enumitron from "enumitron";
