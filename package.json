@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/brybrophy/enumitron#readme",
   "devDependencies": {
-    "@types/chai": "^4.2.12",
-    "@types/mocha": "^8.0.3",
-    "chai": "^4.2.0",
-    "mocha": "^8.1.3",
-    "typescript": "^4.0.2"
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^8.2.2",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "typescript": "^4.2.3"
   },
   "files": [
     "dist"
